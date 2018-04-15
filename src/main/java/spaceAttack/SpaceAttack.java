@@ -7,12 +7,11 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
@@ -273,15 +272,7 @@ class BackGround extends JPanel{
 	Image bg;
 	
 	public BackGround(){
-		try{
-			//String separator;
-			//if(System.getProperty("os.name").toLowerCase(Locale.ENGLISH).indexOf("win")>=0)
-			//	separator = "\\";
-			//else
-			//	separator = "/";
-			bg = ImageIO.read(new File("menu.png"));
-		}
-		catch(IOException exc){}
+		bg = new ImageIcon(this.getClass().getResource("/data/menu.png")).getImage();
 		setVisible(true);
 		setSize(315, 435);
 	}
