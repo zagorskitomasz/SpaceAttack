@@ -1,4 +1,4 @@
-(repository re-uploaded due to converting project to Maven)
+# Space shooter game / Processing / AI / high playability / functionally complete / legacy code
 
 # Space Attack
 
